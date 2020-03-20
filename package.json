@@ -1,0 +1,30 @@
+{
+  "name": "chatroom-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "cross-env PORT=3000 node-dev ./server",
+    "client": "node spawn-client.js",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "deploy": "cross-env PORT=3000 MODE=production node-dev ./server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-socket": "^4.4.0",
+    "koa-static": "^5.0.0",
+    "nedb-promise": "^2.0.1",
+    "reactstrap": "^8.4.1",
+    "socket.io-client": "^2.3.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "cross-env": "^7.0.2",
+    "http-proxy-middleware": "^1.0.3"
+  }
+}

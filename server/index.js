@@ -23,13 +23,13 @@ chatSock.on('login', async ( {socket}, {user, local} ) => {
         socket.emit('login', {error: 'OCCUPIED'});
       } else {
         await db.insert({table:'user', name:user});
-        socket.emit('login', {ok: 'NEW'});
+        socket.emit('login', {ok: 'NEW', user});
       }
     } else {
       if (result === null){
         socket.emit('login', {error: 'EXPIRED'});
       } else {
-        socket.emit('login', {ok: 'BACK'});
+        socket.emit('login', {ok: 'BACK', user});
       }
     }
   } catch ({name, message}) {

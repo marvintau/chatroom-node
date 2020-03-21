@@ -1,5 +1,5 @@
 .App {
-  height:100%;
+  height:100vh;
   width: 100%;
   display:flex;
   flex-direction: column;
@@ -13,6 +13,34 @@
 .content {
   width: 100%;
   height: 100%;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.message {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  letter-spacing: -0.05rem;
+}
+
+.alert-container {
+  width: auto;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.message-sender {
+  font-weight: 700;
+}
+.message-sender::after{
+  content: ':';
+}
+
+.message-content {
+  margin-top: -5px;
+  font-size: 90%;
 }
 
 .input-bar {

@@ -21,16 +21,34 @@ $ sudo apt-get install -y nodejs
 
 ## 2. 安装和运行
 
+先将repository复制到本地
 ```
-# 先将repository复制到本地
 $ git clone https://github.com/marvintau/chatroom-node/
-# 先进入客户端目录()
+```
+进入目录（客户端）
+```
 $ cd chatroom-node/client
-# 安装必要的项目
+```
+安装必要的项目
+```
 $ npm i
+```
+编译客户端
+```
 $ npm run build
-# 回到上级目录（服务端）
+```
+回到上级目录（服务端），再安装必要的项目
+```
+$ cd ..
 $ npm i
+```
+
+如果是在本地运行，那么在项目的目录下输入
+```
+$ npm start
+```
+就可以跑起来了。如果要在远端服务器运行，则需要
+```
 $ npm run deploy
 ```
 

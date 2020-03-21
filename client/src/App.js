@@ -7,7 +7,8 @@ import Sock from 'socket.io-client';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
-const sock = Sock('http://localhost:3000');
+// console.log(window.location.hostname);
+const sock = Sock(window.location.origin);
 
 const log = (anything) => console.log(anything);
 
